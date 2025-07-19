@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    max-width: 850px; /* Slightly wider to accommodate content */
+    padding: 30px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 15px;
+}
+
+.day-section {
+    border-left: 5px solid #007bff; /* Blue line on the left */
+    padding-left: 25px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.day-number {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    width: 45px; /* Slightly larger circle */
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.day-header h2 {
+    color: #007bff;
+    margin: 0;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.activity-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.activity-card:hover {
+    transform: translateY(-3px);
+}
+
+.activity-card .time {
+    font-weight: bold;
+    color: #555;
+    margin-right: 20px;
+    flex-shrink: 0;
+    width: 100px; /* Wider for better alignment */
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+.activity-details {
+    flex-grow: 1;
+}
+
+.activity-details h3 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.activity-details .icon {
+    margin-right: 12px;
+    color: #007bff;
+    font-size: 1.5em; /* Larger icons */
+    flex-shrink: 0;
+}
+
+.activity-details p {
+    margin: 0 0 12px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.travel-info {
+    background-color: #fff3e0; /* Light orange/yellow background */
+    border: 1px solid #ffcc80; /* Slightly darker border */
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    display: inline-block; /* Make it fit content */
+    font-size: 0.9em;
+    color: #663300;
+}
+
+.travel-info p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Specific styling for cards from the image (blue background) */
+.activity-card.blue-background {
+    background-color: #e8f4fd; /* Lighter blue background */
+    border-top: 5px solid #5ab2f7; /* Thicker blue border on top */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12); /* Slightly more prominent shadow */
+}
+
+.activity-card.blue-background .time,
+.activity-card.blue-background .activity-details h3,
+.activity-card.blue-background .activity-details .icon {
+    color: #0056b3; /* Darker blue for text and icons */
+}
+
+.activity-card.blue-background .travel-info {
+    background-color: #ffe0b3; /* Lighter yellow/orange for travel info in blue cards */
+    border-color: #ffc266;
+    color: #8a5a00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .day-section {
+        padding-left: 15px;
+    }
+    .day-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1em;
+        margin-right: 10px;
+    }
+    .day-header h2 {
+        font-size: 1.6em;
+    }
+    .activity-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .activity-card .time {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: auto;
+    }
+    .activity-details .icon {
+        font-size: 1.3em;
+        margin-bottom: 5px;
+    }
+    .activity-details h3 {
+        font-size: 1.1em;
+    }
+    .travel-info {
+        width: 100%;
+        box-sizing: border-box; /* Include padding/border in width */
+    }
+}
